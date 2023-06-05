@@ -6,57 +6,103 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900">
     <title>Document</title>
     <style>
+        body{
+            background-color: white;
+        }
+        @font-face {
+            font-family: 'omyu_pretty';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'yg-jalnan';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        #timer {
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'omyu_pretty', sans-serif;
+            font-size: .7em;
+            letter-spacing: 5px;
+        }
+        .days{
+            display: inline-block;
+            padding: 20px;
+            border-radius: 5px;
+            background-image: linear-gradient(90deg, #48dbff, #fea4ff);
+        }
 
-body{
-        background-color: white;
-    }
-  @font-face {
-    font-family: 'yg-jalnan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    }
-#timer {
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Lato', sans-serif;
-  font-size: .7em;
-  letter-spacing: 5px;
-}
+        .numbers {
+            font-family: 'yg-jalnan', sans-serif;
+            color:  #fff;
+            font-size: 4em;
+            text-align: center;
+        }
+        .d-font {
+            font-family: 'yg-jalnan', sans-serif;
+            color:  #fff;
+            font-size: 4em;
+        }
+        .white {
+            position: absolute;
+            background:  #fff;
+            height: 85px;
+            width: 75px;
+            left: 30%;
+            top: 2%;
+        }
+        button {
+            -webkit-appearance: none;
+            border: 6px solid rgba(255, 255, 255, 0.45);
+            border-radius: 50px;
+            padding: 1em 3em;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-clip: padding-box;
+            position: relative;
+            color: #FFF;
+        }
 
-.days{
-  display: inline-block;
-  padding: 20px;
-  width: 100px;
-  border-radius: 5px;
-}
+        button:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            border-radius: 50px;
+            z-index: -1;
+            filter: blur(14px);
+        }
 
-.days {
-  background: #ffa6c7;
-}
+        button:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            border-radius: 50px;
+            z-index: -1;
+            filter: blur(14px);
+        }
 
-.numbers {
-  font-family: 'yg-jalnan', sans-serif;
-  color:  #fff;
-  font-size: 4em;
-  text-align: center;
-}
-.d-font {
-  font-family: 'yg-jalnan', sans-serif;
-  color:  #fff;
-  font-size: 4em;
-}
-.white {
-  position: absolute;
-  background:  #fff;
-  height: 85px;
-  width: 75px;
-  left: 30%;
-  top: 2%;
-}
+        .button1 {
+            background-image: linear-gradient(90deg, #7b81ec, #3bd1d3);
+        }
 
-</style>
+        .button1:before {
+            background-image: linear-gradient(90deg, #7b81ec, transparent);
+        }
+
+        .button1:after {
+            background-image: linear-gradient(90deg, transparent, #3bd1d3);
+        }
+    </style>
 </head>
 <body>
     
@@ -65,6 +111,10 @@ body{
         <div id="days" class="numbers"> </div>
         겜그 실기 시험일
     </div> 
+    <button class="button1">
+        <div id="days2" class="numbers"> </div>
+        겜그 실기 시험일
+    </button>
 </div>
 
 </body>
@@ -75,6 +125,7 @@ body{
     let days = "D -" + Math.floor(diff / (1000 * 60 * 60 * 24));
     
     document.getElementById("days").innerHTML=days
+     document.getElementById("days2").innerHTML=days
 </script>
 </html>
 
