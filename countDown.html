@@ -17,7 +17,7 @@ body{
     font-style: normal;
     }
 #timer {
-  color: #eeeeee;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
@@ -42,7 +42,11 @@ body{
   font-size: 4em;
   text-align: center;
 }
-
+.d-font {
+  font-family: 'yg-jalnan', sans-serif;
+  color:  #fff;
+  font-size: 4em;
+}
 .white {
   position: absolute;
   background:  #fff;
@@ -52,58 +56,25 @@ body{
   top: 2%;
 }
 
-.red {
-  position: absolute;
-  background:  #EF2F3C;
-  left: 18%;
-  top: 9%;
-  height: 65px;
-  width: 70px;
- 
-}
-
-.blue {
-  position: absolute;
-  background:  #276FBF;
-  height: 80px;
-  width: 80px;
-  left: 60%;
-  top: 5%;
-
-
-}
-
-
-    </style>
+</style>
 </head>
 <body>
     
 <div id="timer">
     <div class="days"> 
-        <div id="days" class="numbers "> </div>게임그래픽 전문가 실기 시험</div> 
+        <div id="days" class="numbers"> </div>
+        겜그 실기 시험일
+    </div> 
 </div>
 
 </body>
 <script>
-    const year = new Date().getFullYear();
     const myDate = new Date('2023-07-08');
-
-    // countdown
-    let timer = setInterval(function() {
-
-      // get today's date
-      const today = new Date().getTime();
-
-      // get the difference
-      const diff = myDate - today;
-
-      // math
-      let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-      // display
-      document.getElementById("days").innerHTML=days
-
-    }, 1);
+    const today = new Date().getTime();
+    const diff = myDate - today;
+    let days = "D -" + Math.floor(diff / (1000 * 60 * 60 * 24));
+    
+    document.getElementById("days").innerHTML=days
 </script>
 </html>
 
