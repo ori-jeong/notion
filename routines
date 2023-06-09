@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<style>
+ @font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.routines{
+    font-family: 'omyu_pretty';
+    border-radius: 15px;
+    padding: 10px;
+    width: calc(14.2857%);
+    color: #555;
+    box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px;
+}
+.title{
+    text-align: center;
+    font-size: 23px;
+    padding-bottom: 5px;
+}
+.line{
+    border-bottom: 1px solid #a1a1a1;
+    border-bottom-style: dashed;
+}
+.text{
+    padding-top: 4px;
+}
+
+</style>
+<body>
+	<div class = "routines">
+		<div class = "title"> 오늘의 루틴 </div>
+		<div class = "line"></div>
+		<div class = "text"> 💧 아침에 물 한잔</div>
+		<div class = "text"> 🆎 영어 앱 공부</div>
+		<div class = "text"> ✍🏻 모닝 5분 저널</div>
+		<div class = "text"> 🖊️ 오늘 업무 정리하기</div>
+		<div class = "text"> 💊 영양제 먹기</div>
+		<div class = "text"> 🧹 5분 방 정리</div>
+		<div class = "text"> 👟 운동하기</div>
+		<div class = "text"> 🧘🏻‍♀️ 스트레칭 하기</div>
+		<div class = "text"> 🖥️ 1일 1알고리즘</div>
+		<div class = "text"> ✍🏻 저녁 5분 저널</div>
+		<div class = "text"> 💝 감사 일기</div>
+		<div class = "text"> 🍱 도시락 준비하기</div>
+		<div class = "text"> 🥗 하루 식단 기록</div>
+		<div class = "text"> 🧹 집 대청소 하기</div>
+		<div class = "text"> 💸 한 주 소비 정리</div>
+	</div>
+</body>
+</html>
